@@ -3,12 +3,12 @@ import random
 from discord.ext import commands
 
 TOKEN = open("token.txt","r").readline()
-client = commands.Bot(command_prefix = '~')
+client = commands.Bot(command_prefix = 'plox ')
 
 client.remove_command('help')
 
 @client.command()
-async def now(ctx):
+async def stage(ctx):
 	response = 'Currently in development stage'
     await ctx.send(response)
 
@@ -21,7 +21,8 @@ async def help(ctx):
     embed = discord.Embed(
         colour = discord.Colour.red())
     embed.set_author(name='Help : list of commands available')
-    embed.add_field(name='~now', value='Gives current state of the bot', inline=False)
+    embed.add_field(name='plox', value='Prefix for the bot')
+    embed.add_field(name='stage', value='Gives current stage of the bot', inline=False)
     await ctx.send(embed=embed)
 
 client.run(TOKEN)
