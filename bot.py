@@ -1,5 +1,5 @@
 import discord
-import random
+import among_us
 from discord.ext import commands
 
 TOKEN = open("token.txt","r").readline()
@@ -9,12 +9,17 @@ client.remove_command('help')
 
 @client.command()
 async def stage(ctx):
-	response = 'Currently in development stage'
-    await ctx.send(response)
+	response = "Currently in development stage"
+	await ctx.send(response)
+
+@client.command()
+async def sus(ctx):
+	response = among_us.impostorSus()
+	await ctx.send(response)
 
 @client.event
 async def on_command_error(ctx, error):
-    await ctx.send(f'({error}), use ~help for usage')
+    await ctx.send(f'({error}), use `plox help` for usage')
 
 @client.command(pass_context=True)
 async def help(ctx):
