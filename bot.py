@@ -14,7 +14,7 @@ async def sus(ctx):
 
 @client.command()
 async def impostor(ctx, name):
-    response = among_us.impostor(name)
+    response = among_us.isImpostor(name)
     await ctx.send(response)
 
 @client.event
