@@ -1,6 +1,6 @@
 #module for items related to Among Us
 
-impostor = '''
+character = '''
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣤⣤⣶⣦⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⠛⠉⠙⠛⠛⠛⠛⠻⢿⣿⣷⣤⡀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⠋⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠈⢻⣿⣿⡄⠀⠀⠀⠀
@@ -22,5 +22,19 @@ impostor = '''
 ⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⠿⠿⠿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 '''
 
-def impostorSus():
+def sus():
+	return character
+
+def impostor(name):
+	impostor = f'''
+. 　　　。　　　　•　 　ﾟ　　。 　　.
+
+　　　.　　　 　　.　　　　　。　　 。　. 　
+
+.　　 。　　　　　ඞ 。 . 　　 • 　　　　•
+
+　ﾟ　{name} was not An Impostor.　 。　
+
+　　ﾟ　　　.　　　. ,　　　　.　 .
+'''
 	return impostor

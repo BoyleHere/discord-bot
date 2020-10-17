@@ -8,14 +8,14 @@ client = commands.Bot(command_prefix = 'plox ')
 client.remove_command('help')
 
 @client.command()
-async def stage(ctx):
-	response = "Currently in development stage"
+async def sus(ctx):
+	response = among_us.sus()
 	await ctx.send(response)
 
 @client.command()
-async def sus(ctx):
-	response = among_us.impostorSus()
-	await ctx.send(response)
+async def impostor(ctx, name):
+    response = among_us.impostor(name)
+    await ctx.send(response)
 
 @client.event
 async def on_command_error(ctx, error):
@@ -26,8 +26,8 @@ async def help(ctx):
     embed = discord.Embed(
         colour = discord.Colour.red())
     embed.set_author(name='Help : list of commands available')
-    embed.add_field(name='plox', value='Prefix for the bot')
-    embed.add_field(name='stage', value='Gives current stage of the bot', inline=False)
+    embed.add_field(name='sus', value='ascii art of `Among Us` character', inline=False)
+    embed.add_field(name='impostor', value='takes a single value and returns ascii art of impostor', inline=False)
     await ctx.send(embed=embed)
 
 client.run(TOKEN)
