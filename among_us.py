@@ -1,4 +1,5 @@
 #module for items related to Among Us
+import random
 
 character = '''
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣤⣤⣶⣦⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -23,10 +24,12 @@ character = '''
 '''
 
 def sus():
+
 	return character
 
-def impostor(name):
-	impostor = f'''
+def isImpostor(name):
+
+	notImpostor = f'''
 . 　　　。　　　　•　 　ﾟ　　。 　　.
 
 　　　.　　　 　　.　　　　　。　　 。　. 　
@@ -37,4 +40,19 @@ def impostor(name):
 
 　　ﾟ　　　.　　　. ,　　　　.　 .
 '''
-	return impostor
+
+	impostor = f'''
+. 　　　。　　　　•　 　ﾟ　　。 　　.
+
+　　　.　　　 　　.　　　　　。　　 。　. 　
+
+.　　 。　　　　　ඞ 。 . 　　 • 　　　　•
+
+　ﾟ　{name} was An Impostor.　 。　.
+
+　　ﾟ　　　.　　　. ,　　　　.　 .
+'''
+
+	random.seed(a=None)
+	response = random.choice((impostor, notImpostor))
+	return response
