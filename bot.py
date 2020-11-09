@@ -5,10 +5,9 @@ from discord.ext import commands
 #self-made modules
 import ascii_art
 import reddit_api
-from config import *
 
 #bot token and client object
-TOKEN = DISCORD_TOKEN
+TOKEN = ''
 client = commands.Bot(command_prefix = 'plox ')
 
 client.remove_command('help')
@@ -21,6 +20,11 @@ async def sus(ctx):
 @client.command()
 async def impostor(ctx, name):
     response = ascii_art.AmongUs.isImpostor(name)
+    await ctx.send(response)
+
+@client.command()
+async def ascii(ctx, name):
+    response = ascii_art.AsciiTextArt.text_art(name)
     await ctx.send(response)
 
 @client.command()
@@ -44,6 +48,7 @@ async def help(ctx):
     embed.add_field(name='sus', value='ascii art of `Among Us` character', inline=False)
     embed.add_field(name='impostor', value='takes a single value and returns ascii art of impostor', inline=False)
     embed.add_field(name='meme', value='takes a single or no value, returns meme from the subreddit', inline=False)
+    embed.add_field(name='ascii', value='ascii art of given value', inline=False)
     await ctx.send(embed=embed)
 
 client.run(TOKEN)

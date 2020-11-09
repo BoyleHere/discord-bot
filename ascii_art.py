@@ -59,3 +59,8 @@ class AmongUs:
 		random.seed(a=None)
 		response = random.choice((impostor, notImpostor))
 		return response
+
+class AsciiTextArt:
+	def text_art(name):
+		result = "```" + pyfiglet.figlet_format(name) + "```"
+		return result

@@ -1,12 +1,11 @@
 import praw
-from config import *
 import random
 
-reddit = praw.Reddit(client_id = REDDIT_APP_ID, 
-					 client_secret = REDDIT_SECRET,
-					 username = USERNAME,
-					 password = PASSWORD,
-					 user_agent = USER_AGENT)
+reddit = praw.Reddit(client_id = '', 
+					 client_secret = '',
+					 username = '',
+					 password = '',
+					 user_agent = 'pythoncryptobot by (u/cryptocrats-bot)')
 
 def meme(subreddit):
 	chosen_subreddit = ''
