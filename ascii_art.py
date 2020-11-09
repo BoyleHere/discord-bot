@@ -1,5 +1,6 @@
-#module for items related to Among Us
+#module for items related to ascii arts
 import random
+import pyfiglet
 
 character = '''
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣤⣤⣶⣦⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -23,13 +24,15 @@ character = '''
 ⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⠿⠿⠿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 '''
 
-def sus():
+class AmongUs:
 
-	return character
+	def sus():
 
-def isImpostor(name):
+		return character
 
-	notImpostor = f'''
+	def isImpostor(name):
+
+		notImpostor = f'''
 . 　　　。　　　　•　 　ﾟ　　。 　　.
 
 　　　.　　　 　　.　　　　　。　　 。　. 　
@@ -41,7 +44,7 @@ def isImpostor(name):
 　　ﾟ　　　.　　　. ,　　　　.　 .
 '''
 
-	impostor = f'''
+		impostor = f'''
 . 　　　。　　　　•　 　ﾟ　　。 　　.
 
 　　　.　　　 　　.　　　　　。　　 。　. 　
@@ -53,6 +56,11 @@ def isImpostor(name):
 　　ﾟ　　　.　　　. ,　　　　.　 .
 '''
 
-	random.seed(a=None)
-	response = random.choice((impostor, notImpostor))
-	return response
+		random.seed(a=None)
+		response = random.choice((impostor, notImpostor))
+		return response
+
+class AsciiTextArt:
+	def text_art(name):
+		result = "```" + pyfiglet.figlet_format(name) + "```"
+		return result
