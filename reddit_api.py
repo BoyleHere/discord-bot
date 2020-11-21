@@ -5,7 +5,7 @@ reddit = praw.Reddit(client_id = '',
 					 client_secret = '',
 					 username = '',
 					 password = '',
-					 user_agent = 'pythoncryptobot by (u/cryptocrats-bot)')
+					 user_agent = '')
 
 def meme(subreddit):
 	chosen_subreddit = ''
